@@ -1,0 +1,189 @@
+html {
+  scroll-behavior: smooth;
+}
+/* Adding temporary basic responsiveness */
+@custom-media --viewport-medium (width <= 35rem);
+@custom-media --viewport-big (width >= 36rem);
+
+.library {
+  background: white;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+@media (--viewport-big) {
+  .library {
+    padding: 1rem;
+  }
+}
+
+.library--wrapper {
+  display: table-row;
+}
+
+.library--sidebar {
+  width: 15%;
+  display: table-cell;
+  background-color: #121212;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  font-family: 'Halifax Regular';
+}
+
+.library--economist-logo {
+  margin: 15px auto;
+  display: block;
+}
+
+.library--sidebar-link {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  float: none;
+  border-bottom: solid 1px grey;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.library--main {
+  width: 85%;
+  display: table-cell;
+}
+
+.library--title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+  margin: 0;
+  display: inline-block;
+  text-transform: capitalize;
+}
+
+.library--package-details {
+  font-size: 1.1rem;
+  font-weight: normal;
+  display: inline-block;
+  margin: 0 .5rem;
+  opacity: .5;
+}
+
+@media (--viewport-medium){
+  .library--title {
+    display: block;
+    padding: 0 1rem;
+  }
+  .library--package-details {
+    font-size: 14px;
+  }
+  .library__grid {
+    display: none;
+  }
+}
+
+
+.library--heading {
+  display: block;
+  background: #E60900;
+  color: white;
+  padding: 1rem;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.library--example-wrapper {
+  margin: 1rem 0;
+}
+
+.library--example-tabs {
+  margin-top: 1rem;
+}
+
+.library--example-tabs .tabs-navigation {
+  padding: 0 20px;
+  margin: 0 -1rem;
+  border-bottom: 1px solid #7A7A7A;
+}
+
+.library--example-tabs .tabs-menu {
+  display: table;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.library--example-tabs .tabs-menu-item {
+  float: left;
+}
+
+.library--example-tabs .tabs-menu-item a {
+  display: block;
+  padding: 0 10px;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 0;
+  color: #7A7A7A;
+  font-size: 18px;
+}
+
+.library--example-tabs .tabs-menu-item:not(.is-active) a:hover {
+  color: #E60900;
+}
+
+.library--example-tabs .tabs-menu-item.is-active a {
+  background: #fff;
+  border: 1px solid #7A7A7A;
+  border-top: 2px solid #E60900;
+  border-bottom: 0;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.library--example-tabs .tab-panel {
+  margin: 1rem 0 0;
+}
+
+.library--example-tabs .tabs-panel.is-active {
+  display: block;
+}
+
+@media (--viewport-medium) {
+  .library {
+    margin: 0;
+  }
+  .library--sidebar {
+    display: block;
+    float: none;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    height: auto;
+  }
+  .library--main {
+    width: 100%;
+    display: block;
+  }
+  .library--economist-logo {
+    width: 60px;
+    height: 60px;
+  }
+  .library__typography .tab-panel {
+    max-height: 400px;
+    overflow: scroll;
+  }
+  .library .tab-panel {
+    padding: 10px 0px;
+  }
+  .library--example-tabs .tabs-navigation {
+    padding: 0;
+  }
+}
+
+.library--description {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
